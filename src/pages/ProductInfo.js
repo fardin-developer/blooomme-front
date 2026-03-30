@@ -13,8 +13,8 @@ import DownloadIcon from "@mui/icons-material/Download";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import MenuBookIcon from "@mui/icons-material/MenuBook";
-import DevicesIcon from "@mui/icons-material/Devices";
+import SpaIcon from "@mui/icons-material/Spa";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 import IMAGES from "../img/image.js";
 import "./ProductInfo.css";
 
@@ -46,6 +46,12 @@ const ProductInfo = () => {
   const [phoneVerified, setPhoneVerified] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+
+  // Shipping Address Form State
+  const [addressLine1, setAddressLine1] = useState("");
+  const [city, setCity] = useState("");
+  const [stateName, setStateName] = useState("");
+  const [pincode, setPincode] = useState("");
 
   const [sendingOtp, setSendingOtp] = useState(false);
   const [paying, setPaying] = useState(false);
@@ -122,6 +128,13 @@ const ProductInfo = () => {
     if (!readyToPay) return message.error("Please enter a valid 10-digit phone number.");
     if (!name.trim()) return message.error("Please enter your full name.");
 
+    if (!isDigital) {
+      if (!addressLine1.trim()) return message.error("Please enter your address.");
+      if (!city.trim()) return message.error("Please enter your city.");
+      if (!stateName.trim()) return message.error("Please enter your state.");
+      if (pincode.trim().length !== 6) return message.error("Please enter a valid 6-digit pincode.");
+    }
+
     if (isDigital) {
       setShowDigitalModal(true);
     } else {
@@ -142,6 +155,16 @@ const ProductInfo = () => {
         email: email.trim(),
         ...(createUserWithOtp ? { otp } : {}),
         ...(affiliateCode ? { aff: affiliateCode } : {}),
+        ...(!isDigital ? {
+          shippingAddress: {
+            fullName: name.trim(),
+            phone,
+            addressLine1: addressLine1.trim(),
+            city: city.trim(),
+            state: stateName.trim(),
+            pincode: pincode.trim(),
+          }
+        } : {})
       };
 
       const res = await orderAPI.createProductUPIOrder(payload);
@@ -223,6 +246,7 @@ const ProductInfo = () => {
   }
 
   const readyToPay = createUserWithOtp ? phoneVerified : phoneEntered;
+  const isAddressValid = isDigital || (addressLine1.trim() && city.trim() && stateName.trim() && pincode.trim().length === 6);
 
   return (
     <Layout>
@@ -237,8 +261,8 @@ const ProductInfo = () => {
 
             {/* Hero Product Card */}
             <div className="pi-product-card">
-              <div className="pi-islamic-deco" aria-hidden="true">
-                <span>﷽</span>
+              <div className="pi-beauty-deco" aria-hidden="true">
+                <span>🌸</span>
               </div>
               <div className="pi-product-meta">
                 <h1 className="pi-product-name">{productMeta?.name}</h1>
@@ -252,7 +276,7 @@ const ProductInfo = () => {
                       : <><LocalShippingIcon sx={{ fontSize: 13 }} /> Ships to You</>
                     }
                   </span>
-                  <span className="pi-halal-badge">✔ Halal Certified</span>
+                  <span className="pi-premium-badge">💖 Made for Her</span>
                 </div>
               </div>
             </div>
@@ -309,15 +333,15 @@ const ProductInfo = () => {
               );
             })()}
 
-            {/* Sadaqah Highlight */}
-            <div className="pi-sadaqah-card">
-              <div className="pi-sadaqah-icon-wrap">
-                <span className="pi-sadaqah-icon">🤲</span>
+            {/* Self-Care Highlight */}
+            <div className="pi-care-card">
+              <div className="pi-care-icon-wrap">
+                <span className="pi-care-icon">🌸</span>
               </div>
-              <div className="pi-sadaqah-text">
-                <h3 className="pi-sadaqah-title">Sadaqah Project</h3>
-                <p className="pi-sadaqah-desc">
-                  <strong>15%</strong> of your purchase price is donated to help poor families.
+              <div className="pi-care-text">
+                <h3 className="pi-care-title">Because You Deserve It</h3>
+                <p className="pi-care-desc">
+                  Curated with love for every woman — comfort, style & confidence.
                 </p>
               </div>
             </div>
@@ -503,6 +527,67 @@ const ProductInfo = () => {
                     <p className="pi-hint">📩 Download link will be sent to this email</p>
                   )}
                 </div>
+
+                {/* Shipping Address - Only for physical products */}
+                {!isDigital && (
+                  <>
+                    <div className="pi-field">
+                      <label className="pi-label">
+                        Address <span className="pi-req">*</span>
+                      </label>
+                      <input
+                        type="text"
+                        className="pi-input"
+                        placeholder="House No, Building, Street, Area"
+                        value={addressLine1}
+                        onChange={(e) => setAddressLine1(e.target.value)}
+                        disabled={createUserWithOtp ? !phoneVerified : phone.length !== 10}
+                      />
+                    </div>
+                    <div className="pi-field" style={{ display: 'flex', gap: '10px' }}>
+                      <div style={{ flex: 1 }}>
+                        <label className="pi-label">
+                          City <span className="pi-req">*</span>
+                        </label>
+                        <input
+                          type="text"
+                          className="pi-input"
+                          placeholder="City"
+                          value={city}
+                          onChange={(e) => setCity(e.target.value)}
+                          disabled={createUserWithOtp ? !phoneVerified : phone.length !== 10}
+                        />
+                      </div>
+                      <div style={{ flex: 1 }}>
+                        <label className="pi-label">
+                          State <span className="pi-req">*</span>
+                        </label>
+                        <input
+                          type="text"
+                          className="pi-input"
+                          placeholder="State"
+                          value={stateName}
+                          onChange={(e) => setStateName(e.target.value)}
+                          disabled={createUserWithOtp ? !phoneVerified : phone.length !== 10}
+                        />
+                      </div>
+                    </div>
+                    <div className="pi-field">
+                      <label className="pi-label">
+                        Pincode <span className="pi-req">*</span>
+                      </label>
+                      <input
+                        type="text"
+                        className="pi-input"
+                        placeholder="6-digit Pincode"
+                        maxLength={6}
+                        value={pincode}
+                        onChange={(e) => setPincode(e.target.value.replace(/\D/g, ""))}
+                        disabled={createUserWithOtp ? !phoneVerified : phone.length !== 10}
+                      />
+                    </div>
+                  </>
+                )}
               </div>
 
               {/* ── UPI logos ── */}
@@ -517,7 +602,7 @@ const ProductInfo = () => {
               <button
                 className="pi-pay-btn pi-pay-btn-desktop"
                 onClick={handlePay}
-                disabled={paying || (createUserWithOtp ? !phoneVerified : phone.length !== 10) || name.trim().length === 0}
+                disabled={paying || (createUserWithOtp ? !phoneVerified : phone.length !== 10) || name.trim().length === 0 || !isAddressValid}
               >
                 {paying
                   ? <><span className="pi-spinner" /> Processing...</>
@@ -534,9 +619,9 @@ const ProductInfo = () => {
 
         {/* Floating Buy Now Button (Mobile Only) */}
         {(() => {
-          const isValidToPay = createUserWithOtp
+          const isValidToPay = (createUserWithOtp
             ? (phoneVerified && name.trim().length > 0)
-            : (phone.length === 10 && name.trim().length > 0);
+            : (phone.length === 10 && name.trim().length > 0)) && !!isAddressValid;
 
           if (!isValidToPay) {
             return (
@@ -576,22 +661,22 @@ const ProductInfo = () => {
           <WhatsAppIcon sx={{ fontSize: 34 }} />
         </a>
 
-        {/* ── Modal for Digital E-Book ── */}
+        {/* ── Modal for Digital Product ── */}
         {showDigitalModal && isDigital && (
           <div className="pi-modal-overlay">
             <div className="pi-modal-content">
               <div className="pi-modal-icon-wrap">
-                <MenuBookIcon sx={{ fontSize: 32 }} />
+                <SpaIcon sx={{ fontSize: 32, color: '#d94f8e' }} />
               </div>
-              <h3 className="pi-modal-title">E-Book (PDF Format)</h3>
+              <h3 className="pi-modal-title">Digital Product</h3>
               <p className="pi-modal-desc">
-                Please note: This is a <strong>Digital Book</strong>. No physical copy will be delivered to your address.
+                Please note: This is a <strong>Digital Product</strong>. No physical item will be shipped to your address.
               </p>
 
               <div className="pi-modal-hindi">
-                <DevicesIcon sx={{ fontSize: 28, color: '#967563', flexShrink: 0 }} />
+                <FavoriteIcon sx={{ fontSize: 26, color: '#d94f8e', flexShrink: 0 }} />
                 <span className="pi-modal-hindi-text">
-                  Yeh Book hum mobile, laptop aur computer mai padh sakte hai.
+                  You can access this product instantly on your mobile, laptop, or tablet — anytime, anywhere. 💕
                 </span>
               </div>
 
@@ -602,7 +687,7 @@ const ProductInfo = () => {
                   proceedToPay();
                 }}
               >
-                I Understand, Continue to Download
+                I Understand, Proceed
               </button>
               <button
                 className="pi-modal-cancel"
