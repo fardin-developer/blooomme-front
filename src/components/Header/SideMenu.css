@@ -37,16 +37,16 @@
 
 .sidemenu-container .logo .icon {
   font-size: 35px;
-  color: #FDFBF7;
+  color: #d94f8e;
 }
 
 .sidemenu {
-  --w-bg: #271E18;
-  --w-bg-light: #4A3E34;
-  --w-gold: #d9ba96;
-  --w-sand: #ddb697;
-  --w-taupe: #967563;
-  --w-text: #FDFBF7;
+  --w-bg: #f9ddf0;            
+  --w-bg-light: #fdf4f9;      
+  --w-gold: #f0b860;          
+  --w-sand: #d94f8e;          
+  --w-taupe: #e87ab5;         
+  --w-text: #4a4a4a;          
 
   width: 100%;
   height: 100%;
@@ -57,7 +57,8 @@
   position: relative;
   background: linear-gradient(180deg, var(--w-bg-light) 0%, var(--w-bg) 100%);
   padding: 0 20px;
-  overflow-y: scroll;
+  overflow-y: auto;
+  box-shadow: 4px 0 15px rgba(217, 79, 142, 0.1);
 }
 
 .sidemenu .close-icon {
@@ -65,31 +66,39 @@
   top: 20px;
   right: 20px;
   font-size: 35px;
-  color: #fff;
+  color: var(--w-sand);
 }
 
 .sidemenu ul li {
-  margin: 15px 0;
-  padding-bottom: 10px;
+  margin: 10px 0;
+  padding: 10px;
   display: flex;
   align-items: center;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.sidemenu ul li:hover {
+  background: rgba(217, 79, 142, 0.08);
+  transform: translateX(5px);
 }
 
 .sidemenu ul li .menuicon {
-  padding: 3px;
-  font-size: 32px;
-  border-radius: 8px;
-  border: 1px solid rgba(217, 186, 150, 0.3);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(135deg, var(--w-sand) 0%, var(--w-gold) 100%);
-  color: var(--w-bg) !important;
+  padding: 6px;
+  font-size: 34px;
+  border-radius: 10px;
+  border: 1px solid rgba(232, 122, 181, 0.4);
+  box-shadow: 0 4px 10px rgba(217, 79, 142, 0.2);
+  background: linear-gradient(135deg, var(--w-sand) 0%, var(--w-taupe) 100%);
+  color: #ffffff !important;
 }
 
 .sidemenu ul li a {
   color: var(--w-text);
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.5px;
+  text-decoration: none;
 }
 
 .ul .icon {
@@ -99,19 +108,18 @@
 .sidemenu .logout {
   color: var(--w-sand);
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 600;
   transition: all 0.3s ease;
 }
 
 .sidemenu .logout .icon {
   margin-right: 10px;
   font-size: 30px;
-  color: var(--w-gold);
+  color: var(--w-sand);
 }
 
 .sidemenu .logout:hover {
-  color: var(--w-gold);
-  transform: translateX(5px);
+  color: var(--w-taupe);
 }
 
 .sidemenu-img {
@@ -119,7 +127,7 @@
   height: 80px;
   border-radius: 100px;
   object-fit: cover;
-  border: 3px solid #26bd68;
+  border: 3px solid var(--w-taupe);
   display: block;
   margin: 0 auto;
 }
@@ -130,14 +138,14 @@
 }
 
 .sidemenu-action-btn a {
-  color: #fff;
+  color: var(--w-text);
   text-decoration: underline !important;
   margin-top: 40px !important;
 }
 
 /* USER IMAGE  */
 .user {
-  color: #fff;
+  color: var(--w-text);
   position: relative;
 }
 
@@ -146,57 +154,57 @@
 }
 
 .user .icon {
-  color: #d9ba96;
+  color: var(--w-sand);
   font-size: 50px;
   margin-right: 10px;
 }
 
 .user .pencil {
   font-size: 14px;
-  color: #ddb697;
+  color: var(--w-taupe);
   position: absolute;
   top: 0;
   left: 45px;
 }
 
 .signin {
-  background: linear-gradient(135deg, var(--w-gold) 0%, var(--w-sand) 100%);
-  color: var(--w-bg);
+  background: linear-gradient(135deg, var(--w-sand) 0%, var(--w-taupe) 100%);
+  color: #ffffff;
   width: 100%;
-  padding: 12px;
+  padding: 14px;
   outline: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 12px;
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(217, 79, 142, 0.25);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   cursor: pointer;
 }
 
 .signin:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(217, 186, 150, 0.3);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(217, 79, 142, 0.35);
+  background: linear-gradient(135deg, #cc4280 0%, var(--w-sand) 100%);
 }
 
-/* Islamic separator */
-.islamic-divider {
+/* Theme separator */
+.theme-divider {
   width: 100%;
   height: 1px;
-  background-color: var(--w-taupe);
+  background-color: rgba(217, 79, 142, 0.2);
   margin: 25px 0;
   position: relative;
-  opacity: 0.6;
 }
 
-.islamic-divider::before {
-  content: '❖';
+.theme-divider::before {
+  content: '🌸';
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: var(--w-gold);
+  font-size: 18px;
   padding: 0 10px;
-  font-size: 14px;
+  line-height: 1;
 }

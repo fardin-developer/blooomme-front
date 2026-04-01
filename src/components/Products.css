@@ -1,6 +1,9 @@
 /* =============================================
-   E-Commerce Product Listing - Products.css
+   Products.css  —  Women's Lifestyle Theme
+   Blush Pink & Rose Gold
    ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap');
 
 .ecom-products-container {
   padding: 40px 60px 80px;
@@ -10,7 +13,7 @@
   overflow-x: hidden;
 }
 
-/* ---- Header ---- */
+/* ── Header ── */
 .ecom-header {
   text-align: center;
   margin-bottom: 36px;
@@ -24,25 +27,25 @@
 }
 
 .ecom-title-icon {
-  font-size: 36px !important;
-  color: #967563;
-  filter: drop-shadow(0 2px 6px rgba(150, 117, 99, 0.4));
+  font-size: 34px !important;
+  color: #d94f8e;
+  filter: drop-shadow(0 2px 6px rgba(185, 50, 120, 0.38));
 }
 
 .ecom-title {
+  font-family: 'Playfair Display', serif;
   font-size: 34px;
   font-weight: 800;
   margin: 0;
-  background: linear-gradient(135deg, #967563 0%, #d9ba96 50%, #ddb697 100%);
+  background: linear-gradient(135deg, #d94f8e 0%, #e87ab5 50%, #f0b860 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   letter-spacing: 1px;
-  text-transform: uppercase;
 }
 
 .ecom-subtitle {
-  color: #888;
+  color: #b57a9c;
   font-size: 15px;
   margin: 6px 0 20px;
   letter-spacing: 0.3px;
@@ -52,11 +55,11 @@
   height: 3px;
   width: 80px;
   margin: 0 auto;
-  background: linear-gradient(90deg, #967563, #d9ba96);
+  background: linear-gradient(90deg, #d94f8e, #e87ab5, #f0b860);
   border-radius: 10px;
 }
 
-/* ---- Category Filters ---- */
+/* ── Category Filters ── */
 .ecom-filters {
   display: flex;
   flex-wrap: wrap;
@@ -67,8 +70,8 @@
 
 .ecom-filter-btn {
   background: transparent;
-  border: 2px solid rgba(150, 117, 99, 0.3);
-  color: #666;
+  border: 2px solid rgba(185, 50, 120, 0.28);
+  color: #b03876;
   padding: 7px 20px;
   border-radius: 100px;
   font-size: 13px;
@@ -80,43 +83,43 @@
 
 .ecom-filter-btn:hover,
 .ecom-filter-btn.active {
-  background: linear-gradient(135deg, #967563, #d9ba96);
+  background: linear-gradient(135deg, #d94f8e, #e87ab5);
   border-color: transparent;
   color: #fff;
-  box-shadow: 0 4px 16px rgba(150, 117, 99, 0.35);
+  box-shadow: 0 4px 18px rgba(185, 50, 120, 0.35);
   transform: translateY(-1px);
 }
 
-/* ---- Grid ---- */
+/* ── Grid ── */
 .ecom-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 28px;
 }
 
-/* ---- Card ---- */
+/* ── Card ── */
 .ecom-card {
   background: #fff;
-  border-radius: 20px;
+  border-radius: 22px;
   overflow: hidden;
   cursor: pointer;
   position: relative;
   box-shadow:
-    0 4px 20px rgba(0, 0, 0, 0.07),
-    0 1px 4px rgba(0, 0, 0, 0.05);
+    0 4px 22px rgba(185, 50, 120, 0.08),
+    0 1px 4px rgba(0, 0, 0, 0.04);
   transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-  border: 1px solid rgba(150, 117, 99, 0.1);
+  border: 1.5px solid rgba(185, 50, 120, 0.10);
 }
 
 .ecom-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-9px);
   box-shadow:
-    0 20px 40px rgba(150, 117, 99, 0.18),
-    0 8px 16px rgba(0, 0, 0, 0.08);
-  border-color: rgba(150, 117, 99, 0.3);
+    0 22px 44px rgba(185, 50, 120, 0.18),
+    0 8px 18px rgba(185, 50, 120, 0.10);
+  border-color: rgba(185, 50, 120, 0.28);
 }
 
-/* ---- Badge ---- */
+/* ── Badge ── */
 .ecom-badge {
   position: absolute;
   top: 14px;
@@ -127,29 +130,29 @@
   gap: 4px;
   font-size: 11px;
   font-weight: 700;
-  padding: 5px 11px;
+  padding: 5px 12px;
   border-radius: 100px;
   letter-spacing: 0.3px;
   backdrop-filter: blur(8px);
 }
 
 .ecom-badge.digital {
-  background: rgba(150, 117, 99, 0.92);
+  background: linear-gradient(135deg, rgba(185, 50, 120, 0.92), rgba(217, 79, 142, 0.88));
   color: #fff;
 }
 
 .ecom-badge.physical {
-  background: rgba(217, 186, 150, 0.9);
+  background: linear-gradient(135deg, rgba(240, 184, 96, 0.90), rgba(232, 122, 181, 0.88));
   color: #fff;
 }
 
-/* ---- Image ---- */
+/* ── Image ── */
 .ecom-card-img-wrap {
   width: 100%;
   aspect-ratio: 16/9;
   overflow: hidden;
   position: relative;
-  background: linear-gradient(135deg, #f4eee6, #e6d3bf);
+  background: linear-gradient(135deg, #fce8f4, #f9d0e9);
 }
 
 .ecom-card-img {
@@ -161,19 +164,21 @@
 }
 
 .ecom-card:hover .ecom-card-img {
-  transform: scale(1.07);
+  transform: scale(1.08);
 }
 
 .ecom-img-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom,
-      transparent 50%,
-      rgba(150, 117, 99, 0.08) 100%);
+  background: linear-gradient(
+    to bottom,
+    transparent 50%,
+    rgba(185, 50, 120, 0.07) 100%
+  );
   pointer-events: none;
 }
 
-/* ---- Body ---- */
+/* ── Body ── */
 .ecom-card-body {
   padding: 18px 20px 20px;
 }
@@ -184,8 +189,8 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.9px;
-  color: #967563;
-  background: rgba(150, 117, 99, 0.08);
+  color: #d94f8e;
+  background: rgba(217, 79, 142, 0.09);
   padding: 3px 10px;
   border-radius: 100px;
   margin-bottom: 10px;
@@ -194,27 +199,26 @@
 .ecom-name {
   font-size: 17px;
   font-weight: 700;
-  color: #1a1a2e;
+  color: #2a1822;
   margin: 0 0 6px;
   line-height: 1.4;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   line-clamp: 2;
   -webkit-box-orient: vertical;
-
   overflow: hidden;
 }
 
 .ecom-publisher {
   font-size: 13px;
-  color: #888;
+  color: #b57a9c;
   margin: 0 0 18px;
   font-style: italic;
 }
 
 .ecom-shop-btn {
   width: 100%;
-  background: linear-gradient(135deg, #967563, #d9ba96);
+  background: linear-gradient(135deg, #d94f8e 0%, #b03876 100%);
   color: #fff;
   border: none;
   border-radius: 50px;
@@ -224,15 +228,16 @@
   letter-spacing: 0.5px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 14px rgba(150, 117, 99, 0.3);
+  box-shadow: 0 4px 16px rgba(185, 50, 120, 0.30);
 }
 
 .ecom-shop-btn:hover {
-  box-shadow: 0 6px 20px rgba(150, 117, 99, 0.5);
-  transform: translateY(-1px);
+  box-shadow: 0 8px 22px rgba(185, 50, 120, 0.48);
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #e87ab5 0%, #d94f8e 100%);
 }
 
-/* ---- Skeleton ---- */
+/* ── Skeleton ── */
 .ecom-skeleton {
   pointer-events: none;
 }
@@ -240,7 +245,7 @@
 .skeleton-img {
   width: 100%;
   aspect-ratio: 16/9;
-  background: linear-gradient(90deg, #f4eee6 25%, #e6d3bf 50%, #f4eee6 75%);
+  background: linear-gradient(90deg, #fce4f2 25%, #f9d0e9 50%, #fce4f2 75%);
   background-size: 200% 100%;
   animation: shimmer 1.4s infinite;
 }
@@ -248,40 +253,27 @@
 .skeleton-line {
   height: 14px;
   border-radius: 7px;
-  background: linear-gradient(90deg, #f4eee6 25%, #e6d3bf 50%, #f4eee6 75%);
+  background: linear-gradient(90deg, #fce4f2 25%, #f9d0e9 50%, #fce4f2 75%);
   background-size: 200% 100%;
   animation: shimmer 1.4s infinite;
   margin-bottom: 10px;
 }
 
-.skeleton-line.short {
-  width: 40%;
-}
-
-.skeleton-line.long {
-  width: 100%;
-}
-
-.skeleton-line.medium {
-  width: 65%;
-}
+.skeleton-line.short  { width: 40%;  }
+.skeleton-line.long   { width: 100%; }
+.skeleton-line.medium { width: 65%;  }
 
 @keyframes shimmer {
-  0% {
-    background-position: 200% 0;
-  }
-
-  100% {
-    background-position: -200% 0;
-  }
+  0%   { background-position:  200% 0; }
+  100% { background-position: -200% 0; }
 }
 
-/* ---- Empty state ---- */
+/* ── Empty state ── */
 .ecom-empty {
   grid-column: 1 / -1;
   text-align: center;
   padding: 60px 20px;
-  color: #aaa;
+  color: #c09ab5;
 }
 
 .ecom-empty p {
@@ -289,10 +281,7 @@
   font-size: 16px;
 }
 
-/* =============================================
-   Responsive
-   ============================================= */
-
+/* ── Responsive ── */
 @media screen and (max-width: 900px) {
   .ecom-products-container {
     padding: 30px 24px 60px;

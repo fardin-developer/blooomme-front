@@ -1,3 +1,7 @@
+/* =============================================
+   HeroSection.css  —  Women's Lifestyle Theme
+   ============================================= */
+
 .hero-container {
   padding: 25px 100px 15px;
   overflow: hidden;
@@ -5,26 +9,27 @@
   z-index: 10;
 }
 
+/* Primary banner card */
 .hero-container .banner {
   display: flex !important;
-  border-radius: 25px;
+  border-radius: 26px;
   overflow: hidden;
-  background: linear-gradient(135deg, #967563, #d9ba96);
+  background: linear-gradient(135deg, #d94f8e, #e87ab5);
   width: 100%;
   box-shadow:
-    0 15px 35px rgba(150, 117, 99, 0.35),
-    0 8px 15px rgba(0, 0, 0, 0.1),
-    inset 0 0 0 4px rgba(255, 255, 255, 0.3);
-  border: 4px solid rgba(255, 255, 255, 0.5);
+    0 16px 40px rgba(185, 50, 120, 0.30),
+    0 8px 16px rgba(0, 0, 0, 0.08),
+    inset 0 0 0 4px rgba(255, 255, 255, 0.32);
+  border: 3.5px solid rgba(255, 255, 255, 0.48);
   transition: all 0.4s ease;
 }
 
 .hero-container .banner:hover {
   transform: translateY(-5px);
   box-shadow:
-    0 20px 45px rgba(150, 117, 99, 0.4),
-    0 10px 20px rgba(0, 0, 0, 0.15),
-    inset 0 0 0 4px rgba(255, 255, 255, 0.4);
+    0 24px 52px rgba(185, 50, 120, 0.38),
+    0 10px 22px rgba(0, 0, 0, 0.10),
+    inset 0 0 0 4px rgba(255, 255, 255, 0.42);
 }
 
 .hero-container .image {
@@ -35,7 +40,7 @@
   width: 100%;
   height: 280px;
   object-fit: cover;
-  border-radius: 21px;
+  border-radius: 22px;
   display: block;
 }
 
@@ -50,14 +55,14 @@
 .secondary-banner {
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 22px rgba(185, 50, 120, 0.18);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.18);
 }
 
 .secondary-banner:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 25px rgba(150, 117, 99, 0.3);
+  box-shadow: 0 14px 28px rgba(185, 50, 120, 0.28);
 }
 
 .secondary-banner img {
@@ -67,52 +72,23 @@
   display: block;
 }
 
-.hero-container .content {
-  width: 30%;
-  padding: 30px;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-end;
-  gap: 20px;
-
-  p {
-    margin: 0;
-  }
-
-  p:nth-child(1) {
-    color: var(--s);
-    font-size: 15px;
-    font-weight: 500;
-  }
-
-  p:nth-child(2) {
-    color: var(--a);
-    font-size: 16px;
-    font-weight: 600;
-  }
-
-  p:nth-child(3) {
-    font-size: 14px;
-  }
-
-  button {
-    padding: 5px 10px;
-    outline: transparent;
-    border: transparent;
-    background: var(--a);
-    color: var(--p);
-    font-size: 14px;
-    border-radius: 4px;
-    font-weight: 500;
-  }
-}
-
+/* Slick arrows hidden */
 .slick-slider .slick-arrow {
   display: none !important;
 }
 
+/* Slick dots — pink */
+.slick-dots li button:before {
+  color: #d94f8e !important;
+  opacity: 0.4;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #d94f8e !important;
+  opacity: 1;
+}
+
+/* ── Responsive ── */
 @media screen and (max-width: 700px) {
   .hero-container {
     padding: 20px 20px 10px;
@@ -142,35 +118,5 @@
 
   .secondary-banner img {
     height: 130px;
-  }
-
-  .hero-container .content {
-    padding: 5px;
-    width: 100%;
-    color: #fff;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .hero-container .content div {
-    width: 65%;
-  }
-
-  .hero-container .content p:nth-child(1) {
-    font-size: 12px;
-  }
-
-  .hero-container .content p:nth-child(2) {
-    font-size: 14px;
-  }
-
-  .hero-container .content p:nth-child(3) {
-    font-size: 12px;
-    margin-top: 5px;
-  }
-
-  .hero-container .content button {
-    font-size: 12px;
   }
 }

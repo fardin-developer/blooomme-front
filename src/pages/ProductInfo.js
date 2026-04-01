@@ -651,7 +651,7 @@ const ProductInfo = () => {
         })()}
 
         {/* Floating WhatsApp Button */}
-        <a
+        {/* <a
           href="https://wa.me/919401410882"
           target="_blank"
           rel="noopener noreferrer"
@@ -659,7 +659,7 @@ const ProductInfo = () => {
           aria-label="Contact us on WhatsApp"
         >
           <WhatsAppIcon sx={{ fontSize: 34 }} />
-        </a>
+        </a> */}
 
         {/* ── Modal for Digital Product ── */}
         {showDigitalModal && isDigital && (

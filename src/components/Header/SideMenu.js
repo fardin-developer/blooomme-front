@@ -45,7 +45,7 @@ const SideMenu = ({ sideMenu, setSideMenu }) => {
             className="icon"
           />
         </div>
-        <div className="islamic-divider"></div>
+        <div className="theme-divider"></div>
         <ul className="p-0 ul">
           <>
             <li>
@@ -77,7 +77,7 @@ const SideMenu = ({ sideMenu, setSideMenu }) => {
               24/7 Chat Support
             </Link>
           </li>
-          <div className="islamic-divider"></div>
+          <div className="theme-divider"></div>
           {!user && (
             <>
               <button

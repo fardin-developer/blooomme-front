@@ -1,10 +1,16 @@
+/* =============================================
+   Home.css  —  Women's Lifestyle Theme
+   Blush Pink & Rose Gold
+   ============================================= */
+
 .main-home-container {
-  background: linear-gradient(135deg, #fdfbf7 0%, #f4eee6 50%, #e6d3bf 100%);
+  background: linear-gradient(160deg, #fdf4f9 0%, #fce8f4 40%, #f9ddf0 100%);
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
 }
 
+/* Soft petal / bokeh overlay */
 .main-home-container::before {
   content: '';
   position: absolute;
@@ -13,25 +19,27 @@
   right: 0;
   bottom: 0;
   background-image:
-    radial-gradient(circle at 20% 50%, rgba(255, 182, 193, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(255, 192, 203, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 40% 20%, rgba(150, 117, 99, 0.08) 0%, transparent 50%);
+    radial-gradient(circle at 15% 30%,  rgba(217,  79, 142, 0.07) 0%, transparent 45%),
+    radial-gradient(circle at 85% 15%,  rgba(232, 122, 181, 0.09) 0%, transparent 40%),
+    radial-gradient(circle at 50% 80%,  rgba(240, 184,  96, 0.06) 0%, transparent 45%),
+    radial-gradient(circle at 80% 65%,  rgba(217,  79, 142, 0.05) 0%, transparent 40%);
   pointer-events: none;
   z-index: 0;
 }
 
-.main-home-container>* {
+.main-home-container > * {
   position: relative;
   z-index: 1;
 }
 
+/* ── Popup ── */
 .popup-container {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(150, 117, 99, 0.95), rgba(217, 186, 150, 0.95));
+  background: linear-gradient(135deg, rgba(185, 50, 120, 0.92), rgba(232, 122, 181, 0.92));
   backdrop-filter: blur(10px);
   z-index: 999;
   display: flex;
@@ -42,13 +50,8 @@
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 .popup-container img {
@@ -57,7 +60,7 @@
   margin: 0 auto;
   border: 4px solid #fff;
   border-radius: 25px;
-  box-shadow: 0 15px 35px rgba(150, 117, 99, 0.4), 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 15px 40px rgba(185, 50, 120, 0.35), 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .popup-container .icon {
@@ -73,7 +76,7 @@
   transform: scale(1.1) rotate(90deg);
 }
 
-/* Action Buttons - Kawaii Style */
+/* ── Action Buttons ── */
 .action-buttons-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -85,31 +88,22 @@
 }
 
 .action-buttons-container::before {
-  content: '♥';
+  content: '🌸';
   position: absolute;
-  top: -20px;
+  top: -22px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 24px;
-  color: #967563;
-  animation: float 3s ease-in-out infinite;
-  filter: drop-shadow(0 2px 4px rgba(150, 117, 99, 0.3));
+  font-size: 22px;
+  animation: floatIcon 3s ease-in-out infinite;
 }
 
-@keyframes float {
-
-  0%,
-  100% {
-    transform: translateX(-50%) translateY(0px);
-  }
-
-  50% {
-    transform: translateX(-50%) translateY(-5px);
-  }
+@keyframes floatIcon {
+  0%, 100% { transform: translateX(-50%) translateY(0px);  }
+  50%       { transform: translateX(-50%) translateY(-6px); }
 }
 
 .action-button {
-  background: linear-gradient(135deg, #967563 0%, #d9ba96 100%);
+  background: linear-gradient(135deg, #d94f8e 0%, #e87ab5 100%);
   color: #fff;
   padding: 18px 10px;
   border-radius: 20px;
@@ -121,10 +115,10 @@
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   box-shadow:
-    0 8px 16px rgba(150, 117, 99, 0.3),
-    0 4px 8px rgba(150, 117, 99, 0.2),
+    0 8px 18px rgba(185, 50, 120, 0.30),
+    0 4px 8px rgba(185, 50, 120, 0.18),
     inset 0 1px 0 rgba(255, 255, 255, 0.4);
-  border: 3px solid rgba(255, 255, 255, 0.5);
+  border: 2.5px solid rgba(255, 255, 255, 0.45);
   position: relative;
   overflow: hidden;
 }
@@ -136,7 +130,7 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.28) 0%, transparent 70%);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -148,24 +142,24 @@
 .action-button:hover {
   transform: translateY(-6px) scale(1.05);
   box-shadow:
-    0 12px 24px rgba(150, 117, 99, 0.4),
-    0 6px 12px rgba(150, 117, 99, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.6);
-  background: linear-gradient(135deg, #7a5e4f 0%, #cdae8a 100%);
+    0 14px 28px rgba(185, 50, 120, 0.40),
+    0 6px 12px rgba(185, 50, 120, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55);
+  background: linear-gradient(135deg, #b03876 0%, #d94f8e 100%);
 }
 
 .action-button:active {
   transform: translateY(-2px) scale(1.02);
   box-shadow:
-    0 6px 12px rgba(150, 117, 99, 0.35),
-    0 3px 6px rgba(150, 117, 99, 0.25),
-    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    0 6px 14px rgba(185, 50, 120, 0.32),
+    0 3px 6px rgba(185, 50, 120, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.38);
 }
 
 .action-icon {
   font-size: 28px !important;
   color: #fff;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.18));
   transition: all 0.3s ease;
 }
 
@@ -178,11 +172,11 @@
   font-weight: 600;
   color: #fff;
   text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.18);
   letter-spacing: 0.3px;
 }
 
-/* Section Headers */
+/* ── Section Headers ── */
 .section-header {
   text-align: center;
   margin: 30px 0 20px;
@@ -192,51 +186,32 @@
 .section-header h2 {
   font-size: 28px;
   font-weight: 700;
-  background: linear-gradient(135deg, #967563, #d9ba96, #ddb697);
+  background: linear-gradient(135deg, #d94f8e, #e87ab5, #f0b860);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   display: inline-block;
-  text-shadow: 0 2px 4px rgba(150, 117, 99, 0.1);
   letter-spacing: 1px;
   margin: 0;
 }
 
-/* Kawaii Floating Animations */
+/* ── Keyframes ── */
 @keyframes float {
-
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-
-  50% {
-    transform: translateY(-10px);
-  }
+  0%, 100% { transform: translateY(0px);  }
+  50%       { transform: translateY(-10px); }
 }
 
 @keyframes pulse {
-
-  0%,
-  100% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.05);
-  }
+  0%, 100% { transform: scale(1);    }
+  50%       { transform: scale(1.05); }
 }
 
 @keyframes shimmer {
-  0% {
-    background-position: -100% 0;
-  }
-
-  100% {
-    background-position: 200% 0;
-  }
+  0%   { background-position: -100% 0; }
+  100% { background-position:  200% 0; }
 }
 
+/* ── Responsive ── */
 @media screen and (max-width: 786px) {
   .popup-container img {
     width: 90%;
