@@ -262,7 +262,7 @@ const OrderStatus = () => {
       case "digital":
         return "Digital Delivery";
       case "physical":
-        return "Physical Delivery";
+        return "";
       default:
         return type || "—";
     }
