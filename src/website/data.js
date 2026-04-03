@@ -1,6 +1,6 @@
 const website = {
-  link: "https://Islamic Store.in",
-  name: "Islamic Store",
+  link: "https://www.blooomme.com",
+  name: "Blooomme",
   instagram: "",
   facebook: "",
   whatsapp: "",
