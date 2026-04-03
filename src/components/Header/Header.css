@@ -13,7 +13,7 @@
   width: 100%;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.9));
   backdrop-filter: blur(10px);
-  border-bottom: 2px solid rgba(150, 117, 99, 0.2);
+  border-bottom: 2px solid rgba(217, 79, 142, 0.2);
   gap: 15px;
 }
 
@@ -49,7 +49,7 @@
 }
 
 .burger-icon .icon {
-  color: #967563;
+  color: #d94f8e;
   font-size: 28px;
 }
 
@@ -97,12 +97,12 @@
   align-items: center;
   gap: 6px;
   padding: 8px 15px;
-  background: linear-gradient(135deg, #967563, #d9ba96);
+  background: linear-gradient(135deg, #d94f8e, #e87ab5);
   border-radius: 25px;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   box-shadow:
-    0 4px 12px rgba(150, 117, 99, 0.3),
+    0 4px 12px rgba(217, 79, 142, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.3);
   border: 2px solid rgba(255, 255, 255, 0.4);
 }
@@ -110,9 +110,9 @@
 .header-coin-btn:hover {
   transform: translateY(-2px) scale(1.05);
   box-shadow:
-    0 6px 16px rgba(150, 117, 99, 0.4),
+    0 6px 16px rgba(217, 79, 142, 0.4),
     inset 0 1px 0 rgba(255, 255, 255, 0.4);
-  background: linear-gradient(135deg, #7a5e4f, #cdae8a);
+  background: linear-gradient(135deg, #b03876, #d94f8e);
 }
 
 .header-coin-btn img {
@@ -132,7 +132,7 @@
 }
 
 .header-user-icon .icon {
-  color: #967563 !important;
+  color: #d94f8e !important;
 }
 
 .login-btn {
@@ -277,17 +277,17 @@
   align-items: center;
   gap: 5px;
   padding: 6px 12px;
-  background: linear-gradient(135deg, #967563, #d9ba96);
+  background: linear-gradient(135deg, #d94f8e, #e87ab5);
   border-radius: 20px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 3px 10px rgba(150, 117, 99, 0.3);
+  box-shadow: 0 3px 10px rgba(217, 79, 142, 0.3);
   border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .mobile-header-coin-btn:hover {
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(150, 117, 99, 0.4);
+  box-shadow: 0 4px 12px rgba(217, 79, 142, 0.4);
 }
 
 .mobile-header-coin-btn img {
@@ -307,7 +307,7 @@
 }
 
 .mobile-header-user-icon .icon {
-  color: #967563 !important;
+  color: #d94f8e !important;
 }
 
 .mobile-header {
@@ -317,14 +317,14 @@
   width: 100%;
   color: #333;
   z-index: 999;
-  border-bottom: 2px solid rgba(150, 117, 99, 0.2);
+  border-bottom: 2px solid rgba(217, 79, 142, 0.2);
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 10px;
   position: relative;
   min-height: 60px;
-  box-shadow: 0 3px 15px rgba(150, 117, 99, 0.1);
+  box-shadow: 0 3px 15px rgba(217, 79, 142, 0.1);
 }
 
 .mobile-header-left {
@@ -367,7 +367,7 @@
 }
 
 .mobile-header .burger-icon .icon {
-  color: #967563;
+  color: #d94f8e;
   font-size: 28px;
 }
 

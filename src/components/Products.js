@@ -91,14 +91,13 @@ const Products = () => {
                 onClick={() => navigate(`/product/${product._id}`)}
               >
                 {/* Badge */}
-                <div className={`ecom-badge ${product.digital ? "digital" : "physical"}`}>
+                <div className={`ecom-badge ${product.digital ? "digital" : ""}`}>
                   {product.digital ? (
                     <>
                       <DevicesIcon style={{ fontSize: 12 }} /> Digital
                     </>
                   ) : (
                     <>
-                      <LocalShippingIcon style={{ fontSize: 12 }} /> Physical
                     </>
                   )}
                 </div>

@@ -2,17 +2,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&display=swap");
 
 :root {
-  --a: #967563;
+  --a: #d94f8e;
   --b: #333;
   --c: #FFE066;
   --d: #fff;
   --p: #0c152b;
-  --s: #d9ba96;
-  --t: #ddb697;
-  --bg: linear-gradient(135deg, #fdfbf7 0%, #f4eee6 50%, #e6d3bf 100%);
-  --btn: linear-gradient(135deg, #967563, #d9ba96);
-  --fbtn: linear-gradient(90deg, #967563, #d9ba96, #ddb697);
-  --border: 1px solid rgba(150, 117, 99, 0.3);
+  --s: #e87ab5;
+  --t: #f3d2e6;
+  --bg: linear-gradient(135deg, #fdf4f9 0%, #f9e8f2 50%, #f3d2e6 100%);
+  --btn: linear-gradient(135deg, #d94f8e, #e87ab5);
+  --fbtn: linear-gradient(90deg, #d94f8e, #e87ab5, #f3d2e6);
+  --border: 1px solid rgba(217, 79, 142, 0.3);
 }
 
 * {
@@ -116,19 +116,19 @@ select:hover:not(:focus) {
   }
 
   ::-webkit-scrollbar-track {
-    background: rgba(217, 186, 150, 0.15);
+    background: rgba(232, 122, 181, 0.15);
     border-radius: 10px;
   }
 
   ::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background: linear-gradient(135deg, #967563, #d9ba96, #ddb697);
+    background: linear-gradient(135deg, #d94f8e, #e87ab5, #f3d2e6);
     border: 2px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 2px 8px rgba(150, 117, 99, 0.3);
+    box-shadow: 0 2px 8px rgba(217, 79, 142, 0.3);
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, #7a5e4f, #cdae8a, #d2a481);
-    box-shadow: 0 4px 12px rgba(150, 117, 99, 0.4);
+    background: linear-gradient(135deg, #b03876, #d94f8e, #e87ab5);
+    box-shadow: 0 4px 12px rgba(217, 79, 142, 0.4);
   }
 }

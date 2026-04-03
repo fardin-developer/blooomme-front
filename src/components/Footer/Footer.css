@@ -39,8 +39,8 @@
   right: 0;
   bottom: 0;
   background-image:
-    radial-gradient(circle, #d9ba96 1.5px, transparent 1.5px),
-    radial-gradient(circle, #967563 1px, transparent 1px);
+    radial-gradient(circle, #f3d2e6 1.5px, transparent 1.5px),
+    radial-gradient(circle, #e87ab5 1px, transparent 1px);
   background-size: 60px 60px, 30px 30px;
   background-position: 0 0, 30px 30px;
   opacity: 0.12;
@@ -73,13 +73,13 @@
 }
 
 .glow-logo {
-  filter: drop-shadow(0 0 6px rgba(150, 117, 99, 0.2));
+  filter: drop-shadow(0 0 6px rgba(217, 79, 142, 0.2));
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .glow-logo:hover {
   transform: scale(1.05);
-  filter: drop-shadow(0 0 12px rgba(150, 117, 99, 0.35));
+  filter: drop-shadow(0 0 12px rgba(217, 79, 142, 0.35));
 }
 
 .footer-main-section {
@@ -116,7 +116,7 @@
 .heading-line {
   width: 30px;
   height: 3px;
-  background: linear-gradient(90deg, #967563, #d9ba96);
+  background: linear-gradient(90deg, #d94f8e, #e87ab5);
   margin-bottom: 15px;
   border-radius: 10px;
 }
@@ -154,7 +154,7 @@
 }
 
 .footer-container ul li a:hover {
-  color: #967563;
+  color: #d94f8e;
   padding-left: 8px;
 }
 
@@ -195,7 +195,7 @@
   filter: grayscale(0%);
   opacity: 1;
   transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(150, 117, 99, 0.2);
+  box-shadow: 0 4px 12px rgba(217, 79, 142, 0.2);
 }
 
 /* WhatsApp Icon - Enhanced */
@@ -252,16 +252,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #967563, #d9ba96);
+  background: linear-gradient(135deg, #d94f8e, #e87ab5);
   border-radius: 50%;
   transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-  box-shadow: 0 3px 10px rgba(150, 117, 99, 0.25);
+  box-shadow: 0 3px 10px rgba(217, 79, 142, 0.25);
   border: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 .footer-socials .social-link:hover {
   transform: translateY(-5px) scale(1.1);
-  box-shadow: 0 6px 15px rgba(150, 117, 99, 0.4);
+  box-shadow: 0 6px 15px rgba(217, 79, 142, 0.4);
 }
 
 .footer-socials .social-link img {
@@ -273,7 +273,7 @@
 
 /* Footer Bottom */
 .footer-bottom {
-  border-top: 2px solid rgba(150, 117, 99, 0.15);
+  border-top: 2px solid rgba(217, 79, 142, 0.15);
   padding-top: 20px;
   margin-top: 30px;
   text-align: center;
@@ -332,7 +332,7 @@
 .mobile-sticky-footer ul li.active a,
 .mobile-sticky-footer ul li a.active,
 .mobile-sticky-footer ul li a:hover {
-  color: #967563;
+  color: #d94f8e;
   transform: translateY(-2px);
 }
 

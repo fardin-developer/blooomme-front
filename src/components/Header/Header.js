@@ -83,7 +83,7 @@ const Header = () => {
                 >
                   <AccountCircleIcon
                     className="icon"
-                    style={{ fontSize: "32px", color: "#967563" }}
+                    style={{ fontSize: "32px", color: "#d94f8e" }}
                   />
                 </span>
               </Tippy>
@@ -95,7 +95,7 @@ const Header = () => {
               >
                 <AccountCircleIcon
                   className="icon"
-                  style={{ fontSize: "32px", color: "#967563" }}
+                  style={{ fontSize: "32px", color: "#d94f8e" }}
                 />
               </span>
             )}
@@ -128,7 +128,7 @@ const Header = () => {
               >
                 <AccountCircleIcon
                   className="icon"
-                  style={{ fontSize: "28px", color: "#967563" }}
+                  style={{ fontSize: "28px", color: "#d94f8e" }}
                 />
               </span>
             </Tippy>
@@ -140,7 +140,7 @@ const Header = () => {
             >
               <AccountCircleIcon
                 className="icon"
-                style={{ fontSize: "28px", color: "#967563" }}
+                style={{ fontSize: "28px", color: "#d94f8e" }}
               />
             </span>
           )}

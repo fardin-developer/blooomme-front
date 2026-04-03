@@ -68,7 +68,7 @@ const Login = () => {
         <div className="row text-center" style={{ width: "100%", margin: "auto" }}>
           <div className="form d-block m-auto col-12 col-sm-12 col-md-6 col-lg-6">
             <form className="register-form">
-              <h1 style={{ color: "#967563", fontWeight: "600" }}>Sign In</h1>
+              <h1 style={{ color: "#d94f8e", fontWeight: "600" }}>Sign In</h1>
               <div className="form-fields mb-3">
                 <input
                   type="tel"
@@ -152,7 +152,7 @@ const Login = () => {
                   <span
                     onClick={() => navigate("/register")}
                     style={{
-                      color: "#967563",
+                      color: "#d94f8e",
                       cursor: "pointer",
                       fontWeight: "600",
                       textDecoration: "underline"

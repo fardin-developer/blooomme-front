@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(135deg, #fdfbf7 0%, #f4eee6 50%, #e6d3bf 100%);
+  background: linear-gradient(135deg, #fdf4f9 0%, #f9e8f2 50%, #f3d2e6 100%);
   position: relative;
   min-height: 100vh;
 }
@@ -22,14 +22,14 @@ body::after {
 body::before {
   top: -150px;
   right: -150px;
-  background: radial-gradient(circle, #ddb697, #967563);
+  background: radial-gradient(circle, #f3d2e6, #d94f8e);
   animation-delay: 0s;
 }
 
 body::after {
   bottom: -150px;
   left: -150px;
-  background: radial-gradient(circle, #ddb697, #d9ba96);
+  background: radial-gradient(circle, #f3d2e6, #e87ab5);
   animation-delay: 4s;
 }
 

@@ -22,7 +22,7 @@ const Footer = () => {
 
       <div className="container-fluid footer-container">
         <div className="wa-icon-cont">
-          <Link target="_blank" to="https://wa.me/9401410882">
+          <Link target="_blank" to="https://wa.me/918638515089">
             <img src={IMAGES.whatsapp} alt="WhatsApp" className="wa-img" />
           </Link>
         </div>
@@ -48,7 +48,7 @@ const Footer = () => {
                   <Link target="_blank" to="https://www.instagram.com/blooom.me?utm_source=qr&igsh=anlyNGVrM3h3dzBs" className="social-link">
                     <img src={IMAGES.instagram} alt="Instagram" />
                   </Link>
-                  <Link target="_blank" to="https://wa.me/9401410882" className="social-link">
+                  <Link target="_blank" to="https://wa.me/918638515089" className="social-link">
                     <img src={IMAGES.whatsapp} alt="WhatsApp" />
                   </Link>
                   <Link target="_blank" to="mailto:fardinbusinessofficial@gmail.com" className="social-link">
