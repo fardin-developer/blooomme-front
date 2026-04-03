@@ -15,7 +15,7 @@ const FollowUs = () => {
           <img src={IMAGES.facebook} alt="" />
         </Link>
 
-        <Link target="_blank" to="https://www.instagram.com/Islamic Store_offical">
+        <Link target="_blank" to="https://www.instagram.com/blooom.me?utm_source=qr&igsh=anlyNGVrM3h3dzBs">
           <img src={IMAGES.instagram} alt="" />
         </Link>
 

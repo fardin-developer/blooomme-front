@@ -45,7 +45,7 @@ const Footer = () => {
                   {/* <Link target="_blank" to="https://www.facebook.com/profile.php?id=61574096732822" className="social-link">
                     <img src={IMAGES.facebook} alt="Facebook" />
                   </Link> */}
-                  <Link target="_blank" to="https://www.instagram.com/blooommemm" className="social-link">
+                  <Link target="_blank" to="https://www.instagram.com/blooom.me?utm_source=qr&igsh=anlyNGVrM3h3dzBs" className="social-link">
                     <img src={IMAGES.instagram} alt="Instagram" />
                   </Link>
                   <Link target="_blank" to="https://wa.me/9401410882" className="social-link">
