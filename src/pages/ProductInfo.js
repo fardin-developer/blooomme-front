@@ -395,7 +395,11 @@ const ProductInfo = () => {
               </div>
               <div className="pi-trust-item">
                 <BoltIcon className="pi-trust-icon" />
-                <span>Instant Delivery</span>
+                <span>Fast Shipping</span>
+              </div>
+              <div className="pi-trust-item">
+                <BoltIcon className="pi-trust-icon" />
+                <span>Easy Return</span>
               </div>
               {isDigital && productData.downloadUrl && (
                 <div className="pi-trust-item">
