@@ -465,14 +465,14 @@
   }
 
   .wa-icon-cont {
-    bottom: 80px;
-    right: 15px;
+    bottom: 120px;
+    right: 30px;
     width: 45px;
     height: 45px;
   }
 
   .wa-img {
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
   }
 }

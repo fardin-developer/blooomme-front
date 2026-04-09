@@ -57,7 +57,7 @@ body {
     font-size: 13px;
     font-weight: 600;
     cursor: pointer;
-    margin-bottom: 24px;
+    margin-bottom: 14px;
     padding: 8px 18px;
     border-radius: 40px;
     transition: all 0.22s ease;
@@ -114,11 +114,11 @@ body {
 /* ─────────── HERO PRODUCT CARD ─────────── */
 .pi-product-card {
     background: linear-gradient(135deg, #c2658c 0%, #d94f8e 48%, #b03876 100%);
-    border-radius: 22px;
-    padding: 28px 26px;
+    border-radius: 18px;
+    padding: 20px 22px;
     margin-bottom: 16px;
     display: flex;
-    gap: 22px;
+    gap: 16px;
     align-items: flex-start;
     position: relative;
     overflow: hidden;
@@ -164,9 +164,19 @@ body {
     animation: piSparkle 2.5s ease-in-out infinite alternate;
 }
 
+.pi-beauty-deco span {
+    display: inline-block;
+    animation: piSpinPause 6s ease-in-out infinite;
+}
+
 @keyframes piSparkle {
     from { opacity: 0.6; transform: scale(1);   }
     to   { opacity: 1.0; transform: scale(1.25); }
+}
+
+@keyframes piSpinPause {
+    0%, 75% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 .pi-product-meta {
@@ -180,7 +190,7 @@ body {
 
 .pi-product-name {
     font-family: 'Playfair Display', serif;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 800;
     color: #fff;
     margin: 0;
@@ -263,30 +273,29 @@ body {
 
 /* ─────────── CARE / SELF-CARE CARD ─────────── */
 .pi-care-card {
-    background: linear-gradient(135deg, #fff0f8 0%, var(--pi-white) 100%);
-    border: 1.5px solid var(--pi-rose-mid);
-    border-left: 4px solid var(--pi-pink);
-    border-radius: 14px;
-    padding: 16px 20px;
+    background: linear-gradient(135deg, var(--pi-white) 0%, #fef8fa 100%);
+    border: 1px solid var(--pi-rose-mid);
+    border-radius: 12px;
+    padding: 12px 14px;
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 14px;
     margin-bottom: 16px;
-    box-shadow: var(--pi-shadow-sm);
+    box-shadow: 0 2px 8px rgba(180, 50, 110, 0.05);
 }
 
 .pi-care-icon-wrap {
-    width: 50px;
-    height: 50px;
+    width: 42px;
+    height: 42px;
     background: var(--pi-white);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    box-shadow: 0 4px 12px rgba(185, 50, 120, 0.15);
-    border: 1px solid var(--pi-border);
-    animation: piHeartbeat 2s ease-in-out infinite;
+    box-shadow: 0 2px 10px rgba(185, 50, 120, 0.1);
+    border: 1px solid var(--pi-rose-mid);
+    animation: piHeartbeat 2.5s ease-in-out infinite;
 }
 
 @keyframes piHeartbeat {
@@ -295,7 +304,9 @@ body {
 }
 
 .pi-care-icon {
-    font-size: 22px;
+    font-size: 18px;
+    display: inline-block;
+    animation: piSpinPause 6s ease-in-out infinite;
 }
 
 .pi-care-text {
@@ -304,15 +315,15 @@ body {
 
 .pi-care-title {
     color: var(--pi-pink-dark);
-    font-size: 15px;
-    font-weight: 800;
-    margin: 0 0 4px;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 0 2px;
     letter-spacing: 0.2px;
 }
 
 .pi-care-desc {
     color: var(--pi-mauve);
-    font-size: 13.5px;
+    font-size: 12px;
     line-height: 1.4;
     margin: 0;
 }
@@ -918,8 +929,8 @@ body {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding: 24px 18px 22px;
-        gap: 16px;
+        padding: 18px 16px 16px;
+        gap: 12px;
     }
 
     .pi-product-meta {

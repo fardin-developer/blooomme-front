@@ -269,7 +269,7 @@ const ProductInfo = () => {
                 {productData.shortDescription && (
                   <p className="pi-product-tagline">{productData.shortDescription}</p>
                 )}
-                <div className="pi-badges-row">
+                {/* <div className="pi-badges-row">
                   <span className="pi-type-badge">
                     {isDigital
                       ? <><BoltIcon sx={{ fontSize: 13 }} /> Instant Delivery</>
@@ -277,7 +277,7 @@ const ProductInfo = () => {
                     }
                   </span>
                   <span className="pi-premium-badge">💖 Made for Her</span>
-                </div>
+                </div> */}
               </div>
             </div>
 
@@ -416,7 +416,7 @@ const ProductInfo = () => {
                   <p className="pi-price-label">Total Price</p>
                   <div className="pi-price-hero">&#8377;{productData.price}</div>
                 </div>
-                <span className="pi-price-badge">{isDigital ? "Digital" : "Physical"}</span>
+                <span className={isDigital ? "pi-price-badge-digital" : ""}>{isDigital ? "Digital" : ""}</span>
               </div>
 
               <div className="pi-divider" />
@@ -652,7 +652,7 @@ const ProductInfo = () => {
 
         {/* Floating WhatsApp Button */}
         {/* <a
-          href="https://wa.me/91918638515089"
+          href="https://wa.me/91919365498671"
           target="_blank"
           rel="noopener noreferrer"
           className="pi-whatsapp-float"
