@@ -759,7 +759,7 @@ body {
 .pi-gallery-main {
     position: relative;
     width: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 11 / 9;
     background: var(--pi-rose);
     overflow: hidden;
 }
